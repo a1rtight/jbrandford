@@ -1,0 +1,303 @@
+/*GLOBAL*/
+*{
+    padding:0;
+    margin:0;
+  }
+  
+  body{
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  scroll-behavior: [ auto | smooth ];
+  font-weight: normal;
+  font-style: normal;
+  font-kerning: normal;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  }
+
+  :root{
+    --black: #000;
+    --white: #fff;
+    --dark: #171717;
+    --interactive: #8E8E8E;
+    --basegrey: #8B8B8B;
+    --lightgrey: #BFBFBF;
+    --borderlight: #E9E9E9;
+    --borderdark: #2B2B2B;
+}
+  
+  /*TYPE*/
+  @font-face {
+    font-family: "300";
+    src: url("Fonts/Lausanne-300.woff2") format('woff2');
+  }
+  @font-face {
+    font-family: "600";
+    src: url("Fonts/Lausanne-600.woff2") format('woff2');
+  }
+
+
+
+  body{
+    font-family: "300";
+    margin-top: 2rem;
+    color: var(--basegrey);   
+  }
+
+  
+
+p{
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+li{
+    list-style: none;
+    line-height: 0.6rem;
+}
+a{
+    line-height: 1.5rem;
+    color: var(--basegrey);   
+    text-decoration: none;
+}
+/*STRUCTURAL*/
+body{
+    padding: 0 .8rem;
+}
+/* mobile menu */
+li:first-of-type{
+    margin-top: 5rem;
+}
+li:last-of-type{
+    margin-top: 1rem;
+}
+nav,p{
+    display: inline-block;
+    vertical-align: top; /* Aligns them vertically if needed */
+    margin: 0;
+}
+nav{  
+    border-left: 1px solid var(--borderlight);
+    padding-left: .6rem;
+}
+
+
+/* text elements */
+a:first-of-type{
+    display: block;
+    margin-top: 4rem ;
+}
+.logotype{
+    margin-right: .6rem;
+}
+.profile-blurb{
+    margin-top: 8rem;
+    display: none;
+}
+.show-hide .profile-blurb{
+    display: block;
+}
+.copy-footer,
+.copy-footer-mobile{
+    position: absolute;
+    bottom:1.4rem;
+}
+.copy-footer{
+    display: none;
+}
+
+/* image */
+.image-holder{
+    display: flex;    /* Enable Flexbox */
+    justify-content: center;    /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    height: 100%;    /* Ensure the parent div has a height to allow vertical centering */
+    height: 80vh; 
+}
+.show-hide .image-holder{
+    display: none;
+}
+.image-frame{
+    width: 70%;
+    aspect-ratio: 1 / 1;
+    margin:auto;
+   }
+/* interactive */
+
+body,
+.border-item{
+    transition: background-color 0.3s, color 0.3s;
+}
+.border-item{
+    transition: border-color 0.3s;
+}
+
+.cls-1{
+    transition: fill 0.3s;
+
+}
+#show-hide{
+    display: none;
+}
+#light-dark-mode{
+    display: none;
+}
+label[for="light-dark-mode"]{
+    position: absolute;
+    right:.8rem;
+    top:2rem;
+}
+
+.dark-mode {
+    background-color: var(--dark);
+  }
+
+  .dark-mode .border-item {
+    border-color: var(--borderdark); /* Changed border color in dark mode */
+  }
+  
+  li,
+  a,
+  label[for="selected-work"],
+  label[for="profile"]{
+    transition: color 0.6s;
+  }
+  li:hover,
+  a:hover,
+  label[for="selected-work"]:hover,
+  label[for="profile"]:hover,
+  label[for="light-dark-mode"]  {
+    color: var(--lightgrey);
+    cursor: pointer;
+  }
+
+.cls-1.dark-mode{
+    fill: var(--white);
+}
+
+label[for="light-dark-mode"]{
+    width: 1.3rem;
+    height: 1.3rem;
+    padding-top: 0.1rem;
+  
+
+}
+
+
+
+
+input[type="radio"] {
+    display: none;  /* Hide the actual radio button */
+  }
+  
+  
+  input[type="radio"]:checked + label {
+    color: var(--black)
+   
+  }
+
+  body.dark-mode input[type="radio"]:checked + label {
+    color: var(--white)
+
+  }
+
+
+
+
+/* media queries */
+
+
+  @media screen and (min-width: 767px)  {
+    body{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); /* Create 6 equal columns */
+    }
+
+    nav{
+        display: none;
+    }
+
+
+
+    .profile-blurb{
+        grid-column: 5 / 8;
+        margin-top: 0;
+        border-left: 1px solid var(--borderlight);
+        height: calc(100vh - 3.6rem);
+        padding-left: .6rem;
+        padding-right: 2rem;
+        display: block;
+    }
+    .image-holder{
+        grid-row: 1;
+        grid-column: 2 / 5;
+        border-left: 1px solid var(--borderlight);
+        height: calc(100vh - 3.6rem);
+        visibility: visible;
+    }
+  
+label[for="light-dark-mode"]{
+       right: 86vw;
+       top:2.2rem;
+    
+    }
+    /* ensure everything is visible non mobile */
+    .image-holder{
+    display: flex !important;
+}
+
+.profile-blurb{
+    display: block !important; /* Ensures visibility on larger screens */
+
+  }
+  .copy-footer{
+    display: block; 
+}
+.copy-footer-mobile{
+    display: none; 
+}
+
+}
+
+  @media screen and (max-width: 1230px) and (min-width: 767px) {
+
+
+    .profile-blurb,
+    .image-holder{
+        grid-row: 1;
+        grid-column: 3 / 8;
+        margin-top: 0;
+    }
+   
+label[for="light-dark-mode"]{
+        position: absolute;
+        right:.8rem;
+        top:2rem;
+    }
+
+    .image-holder{
+        display: flex;    /* Enable Flexbox */
+        justify-content: center;    /* Center horizontally */
+        align-items: flex-end;    /* Center vertically */
+        height: 100%;    /* Ensure the parent div has a height to allow vertical centering */
+
+      
+    }
+    .image-frame{
+        width: 70%;
+        aspect-ratio: 1 / 1;
+        margin:0;
+       }
+
+
+  }
+
+
+
+
+
+  .invert-colors {
+    filter: invert(100%);
+}

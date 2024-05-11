@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Londoner & award-winning graphic designer. Limited availablity for freelance commission.">
+    
+    <title>J.Brandford</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.4/lottie.min.js"></script>
+
+  <link rel="icon" href="img/icon.ico" sizes="32x32">
+  <link rel="icon" href="img/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="img/apple-touch-icon.png" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png"><!-- 180×180 -->
+
+
+
+  </head>
+  <body>
+    <input type="checkbox" id="light-dark-mode" onchange="toggleDarkMode()">
+    <label for="light-dark-mode" id="checkbox-animation"></label>
+    <input type="radio" id="show-hide" onchange="toggleVisibility()">
+
+
+ <p class="logotype">J.Brandford</p>
+
+
+ <!-- <nav class="mobile-menu border-item">
+    <ul>
+<li><label for="show-hide">Selected work</label></li>
+<li><label for="show-hide">Profile</label></li>
+</ul>
+ </nav> -->
+
+
+ <nav class="mobile-menu border-item">
+    <ul>
+      <li>
+        <input type="radio" id="selected-work" name="content-toggle" checked onchange="toggleContent()">
+        <label for="selected-work">Selected Work</label>
+      </li>
+      <li>
+        <input type="radio" id="profile" name="content-toggle" onchange="toggleContent()">
+        <label for="profile">Profile</label>
+      </li>
+    </ul>
+  </nav>
+  <figure class="copy-footer-mobile">&copy;</figure>
+
+ 
+ <div class="profile-blurb border-item">
+ <p>London-based graphic designer specialising in identity design. A firm believer in simplicity, 
+    Jake’s work is carefully crafted in the pursuit of clear, memorable communication.</p>   
+
+  <a href="mailto:work@jbrandford.com">&#8599;&ensp;email</a>
+  <a href="https://www.instagram.com/_airtight/" target="blank">&#8599;&ensp;instagram</a>
+  <figure class="copy-footer">&copy;</figure>
+ </div>
+<div class="image-holder border-item">
+    <div class="image-frame" id="graphic-animation">
+
+        <!-- <svg id="T1" data-name="T1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 778.8 778.8">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #000;
+                  stroke-width: 0px;
+                }
+              </style>
+            </defs>
+            <path class="cls-1" d="M172.9,444.6s0,0,0,0c0,0,0,0,0,0h0ZM138.1,467l4.5,4.7c57,48.1,174.2,32.8,277.2-40.2h.3c53.3-37.4,82.5-91.6,75.6-133.3h0s0,0,0,0h0c62.5-11.6,122.3-3.1,166.7,24.4,5.3-11.2,8.2-26.8,8.4-37.2.7-30.6-6.6-59-23-83-61.6-90.3-227.5-84.5-370.6,13.1-1.7,1.2-3.4,2.3-5.1,3.5-59.9,42.5-90.6,104.6-75.2,146.7,0,0,0,0,0,0,1.1,3,2.4,5.9,4,8.7,0,0,0,.2.1.2.3.5.6,1,.9,1.5,0,.1.1.2.2.3.3.5.6.9.9,1.4,0,0,0,0,0,0,.4.5.7,1.1,1.1,1.6,1.3,1.9,2.8,3.7,4.3,5.4,0,0,18.7,22.4,40.6,48.5,22.8-6.6,46.3-16,69.9-28.3,11.5-18.2,27.9-35.2,48.3-49.2,10.5-7.2,21.4-13,32.4-17.6h0c33-13.8,44.6-4.6-1.4,31.6-4.1,3.2-8.3,6.4-12.5,9.5-124.7,91.1-267.8,107.4-319.6,36.4-29.3-40.1-23.2-99.5,10.1-160C-1.9,361.4-24.4,477.7,29.5,556.8c24.9,36.6,63.2,60.8,109.7,72.9-20.2-49.1-19.6-106-1.1-162.7ZM478.7,507.7c52.6-38.7,75.7-98.5,54.7-140.2l-16.3-30c5.8,38.6-18.8,87.2-64.4,123l6.1-4.5c-96.6,78-215,96.3-283.8,49.3l28.2,29.3h0c55,55.6,170.5,46.4,270.2-23.2h0c1.5-1,2.9-2,4.4-3.1.3-.2.6-.5,1-.7ZM540.5,589.5c120.1-81.6,193.1-199.5,201.6-306.4h0c1.8-22.4,0-42.8-4-61.2l-23.8-73.9c-.3-.9-.6-1.9-.9-2.8l-1.2-3.6h0c-4.7-13.1-11-25.7-19.1-37.5C614.2-11.5,401.7-4,218.4,121c-16.9,11.6-33,23.7-48.2,36.3-19.2,16.5-37.6,34.9-52.1,53.3-55.6,70.6-73.9,146.3-39.6,193.2,19.6,26.8,53.4,40.1,94.4,40.7,1.4-18.9,6.3-38.6,14.5-58.5h0c-4-6.8-6.7-14.2-8.1-22-18.3-82.6,79.6-180.6,223.7-224.8,3.9-1.2,7.8-2.4,11.7-3.4.6-.2,1.3-.4,1.9-.6h0c106.8-28.9,208.4-6.2,254,66.1,14.6,23.2,22.2,49.4,23.3,77.1,0,47.6-33.3,112.6-81.5,167.9-30.3,33.4-66.3,65-107.3,93-.3.2-.7.5-1,.7-125.3,85.4-264.3,115.9-364.8,89.7,3.2,7.8,6.9,15.4,11.2,22.8,104.8,47.6,257.4,27.1,390-63.1ZM768.6,316.7h0c0,0-17-52.6-17-52.6,3.2,16.1,4.7,29.6,5.2,37.8,8.2,119-77.7,256.1-223.6,337.5-128.9,72-270.3,81.5-368.4,34.7,83.3,107,271.4,110.9,428.7,6.1,142.8-95,212.8-247.8,174.9-363.6Z"/>
+          </svg> -->
+
+
+    </div>
+</div>
+
+</body>
+  
+  </html>
+
+
+
+
+
+
+  <script>
+
+
+function toggleContent() {
+  var showProfile = document.getElementById('profile').checked;
+  var profileBlurb = document.querySelector('.profile-blurb');
+  var imageHolder = document.querySelector('.image-holder');
+
+  if (showProfile) {
+    profileBlurb.style.display = 'block';
+    imageHolder.style.display = 'none';
+  } else {
+    profileBlurb.style.display = 'none';
+    imageHolder.style.display = 'flex';
+  }
+}
+
+
+
+    function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  console.log('Function called');
+  var darkMode = document.body.classList.contains('dark-mode');
+  console.log('Dark mode status:', darkMode);
+  var newColor = darkMode ? [1, 1, 1, 1] : [0, 0, 0, 1];
+  console.log('New color:', newColor);
+}
+
+
+
+
+
+// var graphicAnimation = lottie.loadAnimation({
+//   container: document.getElementById('graphic-animation'), // the DOM element that will contain the animation
+//   renderer: 'svg',
+//   loop: true,
+//   autoplay: true,
+//   path: 'brandford_logos.json' // the path to the animation data
+// });
+
+
+// function updateAnimationColor(animation, newColor) {
+//   // Ensure the animation object is loaded
+//   if (animation && animation.isLoaded) {
+//     animation.renderer.elements.forEach((element) => {
+//       if (element.type === 'shape') {
+//         element.traverseShapes(true, (shape) => {
+//           if (shape.type === 'fill' && shape.p && shape.p.v) {
+//             shape.p.v = [1,1,1,1]; // Set new color here, e.g., [1,1,1,1] for white
+//           }
+//         });
+//       }
+//     });
+//     animation.goToAndPlay(0, true); // Restart the animation to apply color
+//   } else {
+//     console.error('Animation not loaded or undefined');
+//   }
+// }
+
+// // Example of calling the function with the animation object and new color
+// document.getElementById('light-dark-mode').addEventListener('change', function() {
+//   var isChecked = this.checked;
+//   var newColor = isChecked ? [1, 1, 1, 1] : [0, 0, 0, 1]; // White when checked, black otherwise
+//   updateAnimationColor(graphicAnimation, newColor); // Replace 'yourAnimationVariable' with your actual Lottie animation variable
+// });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var animation = lottie.loadAnimation({
+    container: document.getElementById('graphic-animation'), // Replace 'lottie-animation' with the ID of your animation container
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'brandford_logos.json' // Path to your Lottie JSON file
+  });
+
+  const container = document.getElementById('graphic-animation');
+  container.addEventListener('mouseenter', function() {
+    animation.pause(); // Pause the animation when mouse enters the container
+  });
+
+  container.addEventListener('mouseleave', function() {
+    animation.play(); // Resume the animation when mouse leaves the container
+  });
+});
+
+
+
+// function updateAnimationColor(animation, newColor) {
+//   if (animation && animation.isLoaded) {
+//     console.log('Starting color update...');
+
+//     animation.renderer.elements.forEach((layer, index) => {
+//       console.log(`Accessing layer ${index} of type ${layer.type}`);
+
+//       if (layer.type === 'shape') {
+//         layer.traverseShapes(true, (shape, shapeIndex) => {
+//           console.log(`Traversing shape ${shapeIndex}, type: ${shape.type}`);
+//           if (shape.type === 'fill' && shape.p && shape.p.v) {
+//             console.log(`Original color:`, shape.p.v);
+//             shape.p.v = newColor; // Update color
+//             console.log(`New color set to:`, newColor);
+//           }
+//         });
+//       }
+//     });
+
+//     animation.goToAndPlay(animation.currentFrame, true);
+//     console.log('Color update applied, animation continues...');
+//   } else {
+//     console.error('Animation not loaded or undefined');
+//   }
+// }
+
+
+
+document.getElementById('light-dark-mode').addEventListener('change', function() {
+    var container = document.getElementById('graphic-animation');
+    container.classList.toggle('invert-colors');
+});
+
+
+// Darkmode checkbox animation 
+// Darkmode checkbox animation 
+var animation = lottie.loadAnimation({
+  container: document.getElementById('checkbox-animation'),
+  renderer: 'svg',
+  loop: false,
+  autoplay: false,
+  path: 'darkmode.json' // Path to your Lottie JSON file
+});
+
+// Variable to track the animation state
+var isReversed = false;
+
+// Event listener for click to toggle animation direction
+document.getElementById('checkbox-animation').addEventListener('click', function() {
+  if (isReversed) {
+    animation.setDirection(-1);
+    animation.play();
+  } else {
+    animation.setDirection(1);
+    animation.play();
+  }
+  isReversed = !isReversed; // Toggle the state
+});
+
+
+
+  </script>
+
