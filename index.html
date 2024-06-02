@@ -119,46 +119,32 @@ function toggleContent() {
 
 
 
-// var graphicAnimation = lottie.loadAnimation({
-//   container: document.getElementById('graphic-animation'), // the DOM element that will contain the animation
-//   renderer: 'svg',
-//   loop: true,
-//   autoplay: true,
-//   path: 'brandford_logos.json' // the path to the animation data
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   var animation = lottie.loadAnimation({
+//     container: document.getElementById('graphic-animation'), // Replace 'lottie-animation' with the ID of your animation container
+//     renderer: 'svg',
+//     loop: true,
+//     autoplay: true,
+//     path: 'brandford_logos.json' // Path to your Lottie JSON file
+//   });
+
+//   const container = document.getElementById('graphic-animation');
+//   container.addEventListener('mouseenter', function() {
+//     animation.pause(); // Pause the animation when mouse enters the container
+//   });
+
+//   container.addEventListener('mouseleave', function() {
+//     animation.play(); // Resume the animation when mouse leaves the container
+//   });
 // });
-
-
-// function updateAnimationColor(animation, newColor) {
-//   // Ensure the animation object is loaded
-//   if (animation && animation.isLoaded) {
-//     animation.renderer.elements.forEach((element) => {
-//       if (element.type === 'shape') {
-//         element.traverseShapes(true, (shape) => {
-//           if (shape.type === 'fill' && shape.p && shape.p.v) {
-//             shape.p.v = [1,1,1,1]; // Set new color here, e.g., [1,1,1,1] for white
-//           }
-//         });
-//       }
-//     });
-//     animation.goToAndPlay(0, true); // Restart the animation to apply color
-//   } else {
-//     console.error('Animation not loaded or undefined');
-//   }
-// }
-
-// // Example of calling the function with the animation object and new color
-// document.getElementById('light-dark-mode').addEventListener('change', function() {
-//   var isChecked = this.checked;
-//   var newColor = isChecked ? [1, 1, 1, 1] : [0, 0, 0, 1]; // White when checked, black otherwise
-//   updateAnimationColor(graphicAnimation, newColor); // Replace 'yourAnimationVariable' with your actual Lottie animation variable
-// });
-
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
   var animation = lottie.loadAnimation({
-    container: document.getElementById('graphic-animation'), // Replace 'lottie-animation' with the ID of your animation container
+    container: document.getElementById('graphic-animation'),
     renderer: 'svg',
     loop: true,
     autoplay: true,
@@ -166,42 +152,35 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   const container = document.getElementById('graphic-animation');
+  let isPaused = false;
+
+  // Pause animation on mouse enter
   container.addEventListener('mouseenter', function() {
-    animation.pause(); // Pause the animation when mouse enters the container
+    if (!isPaused) {
+      animation.pause();
+    }
   });
 
+  // Resume animation on mouse leave
   container.addEventListener('mouseleave', function() {
-    animation.play(); // Resume the animation when mouse leaves the container
+    if (!isPaused) {
+      animation.play();
+    }
+  });
+
+  // Toggle animation pause state on click
+  container.addEventListener('click', function() {
+    if (isPaused) {
+      animation.play();
+      isPaused = false;
+    } else {
+      animation.pause();
+      isPaused = true;
+    }
   });
 });
 
 
-
-// function updateAnimationColor(animation, newColor) {
-//   if (animation && animation.isLoaded) {
-//     console.log('Starting color update...');
-
-//     animation.renderer.elements.forEach((layer, index) => {
-//       console.log(`Accessing layer ${index} of type ${layer.type}`);
-
-//       if (layer.type === 'shape') {
-//         layer.traverseShapes(true, (shape, shapeIndex) => {
-//           console.log(`Traversing shape ${shapeIndex}, type: ${shape.type}`);
-//           if (shape.type === 'fill' && shape.p && shape.p.v) {
-//             console.log(`Original color:`, shape.p.v);
-//             shape.p.v = newColor; // Update color
-//             console.log(`New color set to:`, newColor);
-//           }
-//         });
-//       }
-//     });
-
-//     animation.goToAndPlay(animation.currentFrame, true);
-//     console.log('Color update applied, animation continues...');
-//   } else {
-//     console.error('Animation not loaded or undefined');
-//   }
-// }
 
 
 

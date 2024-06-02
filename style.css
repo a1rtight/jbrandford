@@ -16,6 +16,11 @@
   font-kerning: normal;
   overflow-x: hidden;
   overflow-y: hidden;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Edge */
+
   }
 
   :root{
@@ -62,6 +67,15 @@ a{
     color: var(--basegrey);   
     text-decoration: none;
 }
+::selection {
+    background: #000;
+    color: #fff;
+  }
+  ::-moz-selection{
+    background: #000;
+    color: #fff;
+  }
+
 /*STRUCTURAL*/
 body{
     margin-top: 1rem;
