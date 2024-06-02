@@ -32,18 +32,17 @@
   /*TYPE*/
   @font-face {
     font-family: "300";
-    src: url("Fonts/Lausanne-300.woff2") format('woff2');
+    src: url("fonts/Lausanne-300.woff2") format('woff2');
   }
   @font-face {
     font-family: "600";
-    src: url("Fonts/Lausanne-600.woff2") format('woff2');
+    src: url("fonts/Lausanne-600.woff2") format('woff2');
   }
 
 
 
   body{
     font-family: "300";
-    margin-top: 2rem;
     color: var(--basegrey);   
   }
 
@@ -56,6 +55,7 @@ p{
 li{
     list-style: none;
     line-height: 0.6rem;
+    z-index: 25;
 }
 a{
     line-height: 1.5rem;
@@ -64,6 +64,7 @@ a{
 }
 /*STRUCTURAL*/
 body{
+    margin-top: 1rem;
     padding: 0 .8rem;
 }
 /* mobile menu */
@@ -87,14 +88,15 @@ nav{
 /* text elements */
 a:first-of-type{
     display: block;
-    margin-top: 4rem ;
+    margin-top: 2rem ;
 }
 .logotype{
     margin-right: .6rem;
 }
 .profile-blurb{
-    margin-top: 8rem;
+    margin-top: 6rem;
     display: none;
+    z-index: 20;
 }
 .show-hide .profile-blurb{
     display: block;
@@ -102,7 +104,7 @@ a:first-of-type{
 .copy-footer,
 .copy-footer-mobile{
     position: absolute;
-    bottom:1.4rem;
+    bottom: .4rem;
 }
 .copy-footer{
     display: none;
@@ -115,6 +117,9 @@ a:first-of-type{
     align-items: center;    /* Center vertically */
     height: 100%;    /* Ensure the parent div has a height to allow vertical centering */
     height: 80vh; 
+    /* pointer-events: none; */
+  
+
 }
 .show-hide .image-holder{
     display: none;
@@ -123,6 +128,9 @@ a:first-of-type{
     width: 70%;
     aspect-ratio: 1 / 1;
     margin:auto;
+   }
+   .image-frame:hover{
+    cursor:pointer;
    }
 /* interactive */
 
@@ -143,11 +151,13 @@ body,
 }
 #light-dark-mode{
     display: none;
+    
 }
 label[for="light-dark-mode"]{
     position: absolute;
     right:.8rem;
-    top:2rem;
+    top:1rem;
+    z-index: 100;
 }
 
 .dark-mode {
@@ -212,7 +222,11 @@ input[type="radio"] {
   @media screen and (min-width: 767px)  {
     body{
         display: grid;
-        grid-template-columns: repeat(7, 1fr); /* Create 6 equal columns */
+        grid-template-columns: repeat(7, 1fr);
+        margin-top: 2rem;
+        padding: 0 1.2rem;
+   
+
     }
 
     nav{
@@ -253,7 +267,9 @@ label[for="light-dark-mode"]{
 
   }
   .copy-footer{
-    display: block; 
+    display: block;
+    bottom:1.4rem;
+
 }
 .copy-footer-mobile{
     display: none; 
@@ -270,10 +286,13 @@ label[for="light-dark-mode"]{
         grid-column: 3 / 8;
         margin-top: 0;
     }
+    .profile-blurb{
+        max-height: 30%;
+    }
    
 label[for="light-dark-mode"]{
         position: absolute;
-        right:.8rem;
+        right: 1.2rem;
         top:2rem;
     }
 
@@ -281,15 +300,17 @@ label[for="light-dark-mode"]{
         display: flex;    /* Enable Flexbox */
         justify-content: center;    /* Center horizontally */
         align-items: flex-end;    /* Center vertically */
-        height: 100%;    /* Ensure the parent div has a height to allow vertical centering */
-
-      
+        height: 100%;/* Ensure the parent div has a height to allow vertical centering */
     }
+
     .image-frame{
         width: 70%;
         aspect-ratio: 1 / 1;
         margin:0;
+        z-index: 10;
        }
+
+   
 
 
   }
