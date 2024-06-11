@@ -242,12 +242,11 @@ body{
     display: flex;    /* Enable Flexbox */
     justify-content: center;    /* Center horizontally */
     align-items: center;    /* Center vertically */
-    height: 100svh; 
+    height: 50svh; 
     width: 100vw;
     position: absolute;
-    top:0;
+    top:30svh;
     left:0;
-    z-index: -10;
     background: lightblue;
 }
 }
