@@ -277,8 +277,8 @@ body{
         width: 100svh;
     }
     .profile-blurb{
-        height: 100svw;
-        width: 100svh;
+        height: 100svh;
+        width: 100svw;
         background: green;
     }
   }
