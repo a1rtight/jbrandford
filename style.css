@@ -277,9 +277,9 @@ body{
         width: 100svh;
     }
     .profile-blurb{
-        /* max-height: calc(100dvh-.8rem);
-        max-height: 70dvh; */
-        background: black;
+        width: calc(100dvh-.8rem);
+        height: 100svh;
+        background: blue;
         overflow: visible;
         width: auto;
     }
