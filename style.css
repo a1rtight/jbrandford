@@ -276,6 +276,9 @@ body{
         height: 50svw; 
         width: 100svh;
     }
+    .profile-blurb{
+        height: 80svw;
+    }
   }
 
   @media screen and (min-width: 767px)  {
