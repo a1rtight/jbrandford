@@ -236,7 +236,7 @@ input[type="radio"] {
 @media screen and (max-width: 767px)  {
 
 body{
-    height: 100svh; 
+    height: 100vh; 
 }    
 .image-holder{
     display: flex;    /* Enable Flexbox */
@@ -248,7 +248,7 @@ body{
     top:0;
     left:0;
     z-index: -10;
-    background: grey;
+    background: lightblue;
 }
 }
 
