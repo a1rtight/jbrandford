@@ -65,8 +65,9 @@ li{
 a{
     line-height: 1.5rem;
     color: var(--basegrey);   
-    text-decoration: none;
+    text-decoration: none;    
 }
+
 ::selection {
     background: #000;
     color: #fff;
@@ -196,6 +197,9 @@ label[for="light-dark-mode"]{
   label[for="profile"]:hover,
   label[for="light-dark-mode"]  {
     color: var(--lightgrey);
+    cursor: pointer;
+  }
+  .logotype:hover{
     cursor: pointer;
   }
 
@@ -355,3 +359,20 @@ label[for="light-dark-mode"]{
   .invert-colors {
     filter: invert(100%);
 }
+
+/* portrait lock test */
+@media screen and (orientation: landscape) {
+    html {
+      /* Rotate the content container */
+      transform: rotate(-90deg);
+      transform-origin: left top;
+      /* Set content width to viewport height */
+      width: 100vh;
+      /* Set content height to viewport width */
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
+    }
+  }

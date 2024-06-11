@@ -24,7 +24,7 @@
     <input type="radio" id="show-hide" onchange="toggleVisibility()">
 
 
-    <a href="."><p class="logotype">J.Brandford</p></a>
+<p class="logotype">J.Brandford</p>
 
 
  <!-- <nav class="mobile-menu border-item">
@@ -116,7 +116,10 @@ function toggleContent() {
 }
 
 
-
+// refresh page on logo click
+document.querySelector('.logotype').addEventListener('click', function() {
+    location.reload();
+});
 
 
 
