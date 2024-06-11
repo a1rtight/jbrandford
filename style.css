@@ -272,6 +272,7 @@ body{
       left: 0;
     }
     .image-holder{
+        top:30svw;
         height: 50svw; 
         width: 100svh;
         opacity: .3;
