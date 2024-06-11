@@ -279,7 +279,10 @@ body{
     .profile-blurb{
         max-height: 100svh;
         width: 100vw;
-        background: lightgray;
+        background: limegreen;
+    }
+    .profile-blurb p{
+        max-width: 100%;
     }
   }
 
