@@ -277,12 +277,13 @@ body{
         width: 100svh;
     }
     .profile-blurb{
-        max-height: 100svh;
-        width: 100vw;
-        background: limegreen;
+        max-height: 100dvh;
+        width: 100dvw;
+        background: yellow;
     }
     .profile-blurb p{
         max-width: 100%;
+        max-height: 100%;
     }
   }
 
