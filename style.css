@@ -274,6 +274,7 @@ body{
     .image-holder{
         height: 50svw; 
         width: 100svh;
+        opacity: .3;
     }
   }
 
