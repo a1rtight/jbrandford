@@ -278,13 +278,12 @@ body{
     }
     .profile-blurb{
         max-height: calc(100dvh-.8rem);
-        width: 100dvw;
-        background: yellow;
-        overflow-wrap: normal;
+        max-height: 70dvh;
+        background: black;
+        overflow: visible;
     }
     .profile-blurb p{
-        max-width: 80vw;
-        overflow-wrap: normal;
+
     }
   }
 
