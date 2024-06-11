@@ -278,8 +278,8 @@ body{
     }
     .profile-blurb{
         width: calc(100svh - .8rem) !important;
-        height: 300ch !important;
-        background: green;
+        height: auto !important;
+        background: yellow;
         overflow: visible;
         width: auto;
     }
