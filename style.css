@@ -258,7 +258,7 @@ body{
 
 /* portrait lock test */
 @media screen and (max-width: 767px) and (orientation: landscape) {
-    html {
+    body {
       /* Rotate the content container */
       transform: rotate(-90deg);
       transform-origin: left top;
@@ -268,8 +268,7 @@ body{
       height: 100vw;
       overflow-x: hidden;
       position: absolute;
-      top: 100%;
-      left: 0;
+      top: calc(100dvh - .8rem);
     }
     .image-holder{
         top:30svw;
@@ -282,8 +281,14 @@ body{
         overflow: visible;
         
     }
-    .profile-blurb p{
-
+    label[for="light-dark-mode"]{
+        width: 1.3rem;
+        height: 1.3rem;
+        padding-top: 0.1rem;
+        position: absolute;
+        top:-.3rem;
+        left: calc( 100svh - 1.6rem);
+    
     }
   }
 
