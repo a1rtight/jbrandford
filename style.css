@@ -312,9 +312,11 @@ body{
     } */
      .image-holder{
         top: 40svh;
-        /* background: green; */
+        background: green;
+        opacity: .2;
         height: 100vh;
         padding: 4rem 0;
+
 
      }
      .image-frame{
@@ -326,7 +328,7 @@ body{
      }
 
     body{
-        overflow-y: scroll;
+        overflow-y: scroll; 
     }
     figure.copy-footer-mobile{
         display: block;
