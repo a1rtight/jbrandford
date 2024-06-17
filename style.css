@@ -310,6 +310,20 @@ body{
     
        
     } */
+     .image-holder{
+        top: 40svh;
+        background: green;
+        height: 100vh;
+        padding: 4rem 0;
+
+     }
+     .image-frame{
+        min-height: 100svh;
+        width: 100%;
+        background: greenyellow;
+        margin: 8rem;
+
+     }
 
     body{
         overflow-y: scroll;
