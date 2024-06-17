@@ -56,6 +56,7 @@
 p{
     font-size: 1.3rem;
     line-height: 1.8rem;
+    max-width: 47ch;
 }
 li{
     list-style: none;
@@ -143,6 +144,7 @@ a:first-of-type{
     width: 70%;
     aspect-ratio: 1 / 1;
     margin:auto;
+    max-height: 70svh;
    }
    .image-frame:hover{
     cursor:pointer;
@@ -257,14 +259,14 @@ body{
 }
 
 /* portrait lock test */
-@media screen and (max-width: 767px) and (orientation: landscape) {
+/* @media screen and (max-width: 767px) and (orientation: landscape) {
     body {
-      /* Rotate the content container */
+     
       transform: rotate(-90deg);
       transform-origin: left top;
-      /* Set content width to viewport height */
+      
       width: 100vh;
-      /* Set content height to viewport width */
+
       height: 100vw;
       overflow-x: hidden;
       position: absolute;
@@ -290,7 +292,27 @@ body{
         left: calc( 100svh - 1.6rem);
     
     }
-  }
+  } */
+
+
+/* portrait test 2 */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  
+    .image-holder{
+        display: flex;    /* Enable Flexbox */
+        justify-content: center;    /* Center horizontally */
+        align-items: center;    /* Center vertically */
+        height: 100svh; 
+        width: 50svw;
+        position: absolute;
+        top:0;
+        left: 40svw;
+    
+       
+    }
+}
+
+
 
   @media screen and (min-width: 767px)  {
     body{
