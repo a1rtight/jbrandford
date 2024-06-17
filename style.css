@@ -318,7 +318,7 @@ body{
 
      }
      .image-frame{
-        min-height: 100svh;
+        min-height: 90svh;
         width: 100%;
         background: greenyellow;
         margin: 8rem;
