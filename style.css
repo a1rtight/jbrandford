@@ -328,6 +328,14 @@ body{
     body{
         overflow-y: scroll;
     }
+    figure.copy-footer-mobile{
+        display: block;
+        top: 160svh;
+        position: absolute;
+    
+
+    
+    }
 }
 
 
