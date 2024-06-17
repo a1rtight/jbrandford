@@ -312,8 +312,8 @@ body{
     } */
      .image-holder{
         top: 40svh;
-        background: green;
-        opacity: .2;
+        /* background: green; */
+        /* opacity: .2; */
         height: 100vh;
         padding: 4rem 0;
 
@@ -331,9 +331,9 @@ body{
         overflow-y: scroll; 
     }
     figure.copy-footer-mobile{
-        display: block;
-        top: 160svh;
-        position: absolute;
+       position: absolute;
+       top: 180svh;
+     
     
 
     
