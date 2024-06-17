@@ -298,10 +298,10 @@ body{
 /* portrait test 2 */
 @media screen and (max-width: 767px) and (orientation: landscape) {
   
-    .image-holder{
-        display: flex;    /* Enable Flexbox */
-        justify-content: center;    /* Center horizontally */
-        align-items: center;    /* Center vertically */
+    /* .image-holder{
+        display: flex;    
+        justify-content: center;    
+        align-items: center;    
         height: 100svh; 
         width: 50svw;
         position: absolute;
@@ -309,6 +309,10 @@ body{
         left: 40svw;
     
        
+    } */
+
+    body{
+        overflow-y: scroll;
     }
 }
 
