@@ -108,6 +108,7 @@ a:first-of-type{
 }
 .logotype{
     margin-right: .6rem;
+
     height: 2ch;
     width: 9ch;
 }
@@ -377,7 +378,7 @@ body{
   
 label[for="light-dark-mode"]{
        right: 86vw;
-       top:2.2rem;
+       top:2rem;
     
     }
     /* ensure everything is visible non mobile */
