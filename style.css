@@ -134,9 +134,7 @@ a:first-of-type{
     height: 100%;    /* Ensure the parent div has a height to allow vertical centering */
     height: 80vh; 
     /* pointer-events: none; */
-  
-
-}
+  }
 .show-hide .image-holder{
     display: none;
 }
@@ -446,3 +444,9 @@ label[for="light-dark-mode"]{
     filter: invert(100%);
 }
 
+/* Tablet portrait fix */
+@media screen and (min-width: 767px) and (orientation: portrait) {
+    .image-holder.border-item{
+        max-height: calc(100svh - 3.6rem);
+    }
+}
