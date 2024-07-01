@@ -108,6 +108,8 @@ a:first-of-type{
 }
 .logotype{
     margin-right: .6rem;
+    height: 2ch;
+    width: 9ch;
 }
 .profile-blurb{
     margin-top: 6rem;
